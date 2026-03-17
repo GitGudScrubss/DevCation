@@ -1062,7 +1062,7 @@ export default function App() {
                   ].map(({ icon: Icon, label, href }) => (
                     <a key={label} href={href} aria-label={label}
                       className="w-10 h-10 rounded-xl bg-surface border border-border flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-200 cursor-pointer">
-                      <Icon className="w-4 h-4" />
+                      <Icon className={label === 'X' ? "w-5 h-5" : "w-4 h-4"} />
                     </a>
                   ))}
                 </div>
