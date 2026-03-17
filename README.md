@@ -1,20 +1,56 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# DEVCATION 2026
 
-# Run and deploy your AI Studio app
+![DevCation Logo / Banner Placeholder](public/gdg-logo.png)
 
-This contains everything you need to run your app locally.
+**Devcation Delhi 2026** is the flagship hackathon designed and organized by Google Developer Groups IGDTUW in collaboration with GDG IIT Delhi. It empowers the next generation of innovators through talks, workshops, mentorship, and intense weekend hacking.
 
-View your app in AI Studio: https://ai.studio/apps/11b0f00c-2bd4-46d0-9f4b-ec9b396721a5
+## 🌟 The Event
+*   **Grand Finale:** Hosted at IIT Delhi on April 12, 2026.
+*   **Prize Pool:** ₹3,00,000+ in cash prizes and exclusive rewards.
+*   **Format:** A hybrid hackathon starting with the online "Hack 'N' Solve" round (36 hours), followed by mentorship, culminating in the live, on-stage Grand Finale pitches.
 
-## Run Locally
+## 🚀 Hackathon Tracks
+The competition is divided across 4 distinct tracks:
+1.  **TigerGraph Track:** Build solutions using TigerGraph as the core graph database (Fraud detection, recommendation systems, cybersecurity).
+2.  **Hack 'N' Solve (Open Innovation):** Solve real-world challenges across FinTech, HealthTech, AI, and Web3.
+3.  **Sustainability Track:** Powered by Rotaract Club — build tech for environmental and social impact.
+4.  **Duality Track:** Combine two distinct fields of tech or science to build something entirely new.
 
-**Prerequisites:**  Node.js
+## 💻 Tech Stack
+This repository contains the landing page and registration portal.
+*   **Framework:** React 19 + Vite
+*   **Styling:** Tailwind CSS v4
+*   **Animations:** Framer Motion
+*   **Icons:** Lucide React
+*   **Components:** Custom UI based on shadcn/ui principles (Glassmorphism, intense neon glows, modern grid layouts).
 
+## 🛠️ Local Development Setup
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+**Prerequisites:** Node.js (v18+)
+
+1. Clone the repository and install dependencies:
+   ```bash
+   git clone https://github.com/GitGudScrubss/DevCation.git
+   cd DevCation
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+   The site will be available at `http://localhost:3000`.
+
+## 🌐 Production Deployment
+The site is configured as a Single Page Application (SPA) and is pre-configured for **Vercel** edge deployments. 
+The included `vercel.json` ensures all routes perfectly resolve back to `index.html`.
+
+You can trigger a production build locally to test for errors:
+```bash
+npm run build
+```
+
+## 🤝 Partners
+*   GDG IGDTUW
+*   GDG IIT Delhi
+*   Rotaract Club IGDTUW
+*   TigerGraph
