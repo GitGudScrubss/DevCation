@@ -710,44 +710,6 @@ export default function App() {
   const countdown = useCountdown(DEADLINE);
   const [selectedTrack, setSelectedTrack] = useState<number | null>(null);
 
-  // Inject CSS directly into ElevenLabs Shadow DOM to force transparency
-  useEffect(() => {
-    const injectStyles = () => {
-      const widget = document.querySelector('elevenlabs-convai');
-      if (widget && widget.shadowRoot) {
-        // If we haven't already injected our custom style block
-        if (!widget.shadowRoot.querySelector('#devcation-widget-override')) {
-          const style = document.createElement('style');
-          style.id = 'devcation-widget-override';
-          style.textContent = `
-            [class*="_container_"], [class*="_wrapper_"] {
-              background: transparent !important;
-              box-shadow: none !important;
-              border: none !important;
-            }
-            /* Force the floating container to anchor bottom-left instead of bottom-right */
-            [class*="_container_"] {
-              left: 24px !important;
-              right: auto !important;
-              bottom: 24px !important;
-            }
-            [class*="_text_"], [class*="_btn_"] {
-              display: none !important;
-            }
-          `;
-          widget.shadowRoot.appendChild(style);
-        }
-      }
-    };
-
-    // Poll for the widget shadow root to initialize (since it mounts asynchronously)
-    const intervalId = setInterval(injectStyles, 500);
-    // Cleanup interval after 10 seconds to save resources
-    setTimeout(() => clearInterval(intervalId), 10000);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
   // Page content fades in as deer shrinks
   const contentOpacity = useTransform(scrollY, [SHRINK_DISTANCE * 0.4, SHRINK_DISTANCE * 0.9], [0, 1]);
   const contentY = useTransform(scrollY, [SHRINK_DISTANCE * 0.4, SHRINK_DISTANCE * 0.9], [50, 0]);
