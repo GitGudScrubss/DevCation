@@ -43,6 +43,12 @@ import RadialOrbitalTimeline, { type TimelineItem } from '@/components/ui/radial
 import { cn } from '@/lib/utils';
 import { ShinyButton } from '@/components/ui/shiny-button';
 
+const XIcon = (props: React.ComponentProps<'svg'>) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+  </svg>
+);
+
 // ─── Constants ────────────────────────────────────────────────────────────────
 const DEADLINE = new Date('2026-04-02T11:59:00+05:30');
 const REGISTER_URL =
@@ -1049,7 +1055,7 @@ export default function App() {
                 </p>
                 <div className="flex space-x-3">
                   {[
-                    { icon: Twitter,   label: 'Twitter',   href: 'https://x.com/GDG_IGDTUW' },
+                    { icon: XIcon,     label: 'X',         href: 'https://x.com/GDG_IGDTUW' },
                     { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/gdg_igdtuw/' },
                     { icon: Linkedin,  label: 'LinkedIn',  href: 'https://www.linkedin.com/company/dscigdtuw/?originalSubdomain=in' },
                     { icon: Mail,      label: 'Email',     href: 'mailto:dscigdtuw@gmail.com' },
