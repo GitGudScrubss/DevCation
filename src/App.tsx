@@ -725,6 +725,12 @@ export default function App() {
               box-shadow: none !important;
               border: none !important;
             }
+            /* Force the floating container to anchor bottom-left instead of bottom-right */
+            [class*="_container_"] {
+              left: 24px !important;
+              right: auto !important;
+              bottom: 24px !important;
+            }
             [class*="_text_"], [class*="_btn_"] {
               display: none !important;
             }
